@@ -1,4 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-html {
-    font-family: 'Roboto', sans-serif;
+@import 'base/main.scss';
+@import 'utils/mixins.scss';
+@import 'utils/_variables.scss';
+@import 'layouts/header.scss';
+@import 'components/purple-button.scss';
+
+/* tempo */
+
+.cards-resto img {
+    max-width: 100px;
+}
+
+footer img {
+    max-width: 100px;
+}
+
+/* presentation */
+
+#presentation {
+    background-color: #fcf9f9;
+    padding-bottom: 40px
+}
+
+#presentation__location {
+    @include center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f4f4;
+
+    p {
+        margin-left: 10px;
+        font-weight: bold;
+    }
+}
+
+h1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+#presentation__catch-phrase {
+    text-align: center;
+    color: gray;
 }
