@@ -1,10 +1,10 @@
 .purple-button {
     @include purple-gradiant;
     @include center;
-    width: 150px;
-    font-size: 12px;
+    max-width: 200px;
+    font-size: 18px;
     color: #fff;
     text-align: center;
-    padding: 10px;
-    border-radius: 25px;
+    padding: 18px;
+    border-radius: 30px;
 }

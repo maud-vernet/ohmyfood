@@ -4,10 +4,13 @@
     margin-right: auto;
     }
 
-@mixin shadow {
-    
-    }
-
 @mixin purple-gradiant {
-    background: linear-gradient(#FF79DA, #9356DC);
+    background: linear-gradient($color-secondary, $color-primary);
+}
+
+@mixin flex-wrap-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
 }

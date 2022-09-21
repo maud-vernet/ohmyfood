@@ -1,0 +1,38 @@
+
+footer {
+    background-color: #353535;
+    color: white;
+
+
+    ul {
+        list-style: none;
+        padding-inline-start: 0;
+        margin-block-end: 0;
+        padding-bottom: 30px;
+        @include flex-wrap-row;
+        
+
+    }
+
+    li {
+        margin-top: 10px;
+        width: 25%;
+
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    a {
+        color: white;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.footer__icon {
+    width: 14px;
+    margin-right: 10px;
+}

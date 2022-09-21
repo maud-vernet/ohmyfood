@@ -2,23 +2,26 @@
 @import 'utils/mixins.scss';
 @import 'utils/_variables.scss';
 @import 'layouts/header.scss';
+@import 'layouts/footer.scss';
 @import 'components/purple-button.scss';
 
 /* tempo */
-
-.cards-resto img {
-    max-width: 100px;
-}
 
 footer img {
     max-width: 100px;
 }
 
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 /* presentation */
 
 #presentation {
-    background-color: #fcf9f9;
-    padding-bottom: 40px
+    background: linear-gradient(#FFFFFF, $light-bg-color);
+    padding-bottom: 40px;
 }
 
 #presentation__location {
@@ -26,7 +29,7 @@ footer img {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f5f4f4;
+    background-color: #eaeaea;
 
     p {
         margin-left: 10px;
@@ -37,9 +40,98 @@ footer img {
 h1 {
     font-size: 20px;
     text-align: center;
+    padding: 20px 30px 0 30px;
 }
 
 #presentation__catch-phrase {
     text-align: center;
-    color: gray;
+    padding: 0 15px 0 15px;
+}
+
+.main-padding {
+    padding: 0 3% 0 3%;
+}
+
+h2 {
+    @media only screen and (min-width: 769px) {
+        text-align: center;
+    }
+}
+
+.flex-row {
+    display: flex;
+    align-items: center;
+}
+
+#steps {
+    @include flex-wrap-row;
+    gap: 10px;
+    
+}
+
+.fonctionnement__step {
+    border-radius: 20px;
+    width: 30%;
+    background-color: $light-bg-color;
+    box-shadow: 1px 1px 5px lightgrey;
+    padding: 10px;
+    
+    &:hover {
+        background-color : rgba($color-primary, 0.1);
+    }
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+    }
+    
+}
+
+.step__icon {
+    color : #7e7e7e;
+    padding-left: 10px;
+
+    &:hover {
+        color : $color-primary;
+    }
+}
+
+.step__description {
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+#restaurants {
+    background-color: $light-bg-color;
+}
+
+#restaurants__cards {
+    @include flex-wrap-row;
+}
+
+.restaurants__card {
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    margin-bottom: 20px;
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.restaurant__img {
+    width: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.restaurant__info {
+    padding: 15px;
+}
+
+.restaurant__new-tag {
+    background-color: $color-tertiary;
+    color : darken($color-tertiary, 40%);
+    font-weight: bold;
 }
