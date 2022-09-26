@@ -1,6 +1,7 @@
 .purple-button {
     @include purple-gradiant;
     @include center;
+    @include shadow;
     max-width: 200px;
     font-size: 18px;
     color: #fff;

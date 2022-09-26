@@ -48,33 +48,35 @@ h1 {
     padding: 0 15px 0 15px;
 }
 
-.main-padding {
-    padding: 0 3% 0 3%;
-}
-
 h2 {
     @media only screen and (min-width: 769px) {
         text-align: center;
     }
 }
 
-.flex-row {
-    display: flex;
-    align-items: center;
+#fonctionnement {
+    @include main-padding;
+    
 }
 
 #steps {
     @include flex-wrap-row;
-    gap: 10px;
+    gap: 3%;
+    padding-left: 15px;
+    box-sizing: border-box;
+    width: 100%;
     
 }
 
 .fonctionnement__step {
+    display: flex;
+    align-items: baseline;
     border-radius: 20px;
-    width: 30%;
+    min-width: 280px;
     background-color: $light-bg-color;
-    box-shadow: 1px 1px 5px lightgrey;
+    @include shadow;
     padding: 10px;
+    margin-bottom: 15px;
     
     &:hover {
         background-color : rgba($color-primary, 0.1);
@@ -84,6 +86,14 @@ h2 {
         width: 100%;
     }
     
+}
+
+.step__number {
+    color: #FFFFFF;
+    background-color: $color-primary;
+    border-radius: 100%;
+    padding: 8px 13px 8px 13px;
+    transform: translateX(-25px);
 }
 
 .step__icon {
@@ -102,36 +112,49 @@ h2 {
 
 #restaurants {
     background-color: $light-bg-color;
-}
+    @include main-padding;
 
-#restaurants__cards {
-    @include flex-wrap-row;
+    &__cards {
+        @include flex-wrap-row;
+        gap: 5%;
+    }
 }
 
 .restaurants__card {
     background-color: #FFFFFF;
     border-radius: 25px;
     margin-bottom: 20px;
+    width: 45%;
+    position: relative;
 
     @media only screen and (max-width: 768px) {
         width: 100%;
     }
 }
 
-.restaurant__img {
-    width: 100%;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    height: 250px;
-    object-fit: cover;
-}
+.restaurant {
+    &__img {
+        width: 100%;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        height: 250px;
+        object-fit: cover;
+    }
 
-.restaurant__info {
-    padding: 15px;
-}
+    &__info {
+        padding: 15px;
+    }
 
-.restaurant__new-tag {
-    background-color: $color-tertiary;
-    color : darken($color-tertiary, 40%);
-    font-weight: bold;
+    &__new-tag {
+        background-color: $color-tertiary;
+        color : darken($color-tertiary, 40%);
+        font-weight: bold;
+        padding: 8px 10px 8px 10px;
+        width: fit-content;
+        border-radius: 5px;
+        font-size: 14px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
 }

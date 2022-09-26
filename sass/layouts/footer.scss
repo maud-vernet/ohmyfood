@@ -2,6 +2,8 @@
 footer {
     background-color: #353535;
     color: white;
+    @include main-padding;
+    padding-top: 15px;
 
 
     ul {
@@ -30,6 +32,11 @@ footer {
             text-decoration: underline;
         }
     }
+}
+
+#footer__title {
+    font-family: 'Shrikhand';
+    font-size: 20px;
 }
 
 .footer__icon {

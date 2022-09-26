@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand:wght@400&display=swap");
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -23,6 +24,8 @@ header {
 footer {
   background-color: #353535;
   color: white;
+  padding: 0 3% 0 3%;
+  padding-top: 15px;
 }
 footer ul {
   list-style: none;
@@ -31,7 +34,7 @@ footer ul {
   padding-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 footer li {
   margin-top: 10px;
@@ -49,6 +52,11 @@ footer a:hover {
   text-decoration: underline;
 }
 
+#footer__title {
+  font-family: "Shrikhand";
+  font-size: 20px;
+}
+
 .footer__icon {
   width: 14px;
   margin-right: 10px;
@@ -59,6 +67,7 @@ footer a:hover {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 1px 1px 5px lightgrey;
   max-width: 200px;
   font-size: 18px;
   color: #fff;
@@ -108,34 +117,35 @@ h1 {
   padding: 0 15px 0 15px;
 }
 
-.main-padding {
-  padding: 0 3% 0 3%;
-}
-
 @media only screen and (min-width: 769px) {
   h2 {
     text-align: center;
   }
 }
 
-.flex-row {
-  display: flex;
-  align-items: center;
+#fonctionnement {
+  padding: 0 3% 0 3%;
 }
 
 #steps {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 10px;
+  justify-content: center;
+  gap: 3%;
+  padding-left: 15px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .fonctionnement__step {
+  display: flex;
+  align-items: baseline;
   border-radius: 20px;
-  width: 30%;
+  min-width: 280px;
   background-color: #f6f6f6;
   box-shadow: 1px 1px 5px lightgrey;
   padding: 10px;
+  margin-bottom: 15px;
 }
 .fonctionnement__step:hover {
   background-color: rgba(147, 86, 220, 0.1);
@@ -144,6 +154,14 @@ h1 {
   .fonctionnement__step {
     width: 100%;
   }
+}
+
+.step__number {
+  color: #FFFFFF;
+  background-color: #9356DC;
+  border-radius: 100%;
+  padding: 8px 13px 8px 13px;
+  transform: translateX(-25px);
 }
 
 .step__icon {
@@ -161,18 +179,21 @@ h1 {
 
 #restaurants {
   background-color: #f6f6f6;
+  padding: 0 3% 0 3%;
 }
-
 #restaurants__cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 5%;
 }
 
 .restaurants__card {
   background-color: #FFFFFF;
   border-radius: 25px;
   margin-bottom: 20px;
+  width: 45%;
+  position: relative;
 }
 @media only screen and (max-width: 768px) {
   .restaurants__card {
@@ -187,15 +208,20 @@ h1 {
   height: 250px;
   object-fit: cover;
 }
-
 .restaurant__info {
   padding: 15px;
 }
-
 .restaurant__new-tag {
   background-color: #99E2D0;
   color: #278870;
   font-weight: bold;
+  padding: 8px 10px 8px 10px;
+  width: fit-content;
+  border-radius: 5px;
+  font-size: 14px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

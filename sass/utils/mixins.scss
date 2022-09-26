@@ -11,6 +11,13 @@
 @mixin flex-wrap-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+}
 
+@mixin shadow {
+    box-shadow: 1px 1px 5px lightgrey;
+}
+
+@mixin main-padding {
+    padding: 0 3% 0 3%;
 }
