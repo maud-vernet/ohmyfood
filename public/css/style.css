@@ -86,12 +86,17 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 20px;
+  text-align: center;
+  padding: 20px 30px 0 30px;
+}
+
 /* presentation */
 #presentation {
   background: linear-gradient(#FFFFFF, #f6f6f6);
   padding-bottom: 40px;
 }
-
 #presentation__location {
   display: block;
   margin-left: auto;
@@ -105,13 +110,6 @@ a {
   margin-left: 10px;
   font-weight: bold;
 }
-
-h1 {
-  font-size: 20px;
-  text-align: center;
-  padding: 20px 30px 0 30px;
-}
-
 #presentation__catch-phrase {
   text-align: center;
   padding: 0 15px 0 15px;
@@ -163,7 +161,6 @@ h1 {
   padding: 8px 13px 8px 13px;
   transform: translateX(-25px);
 }
-
 .step__icon {
   color: #7e7e7e;
   padding-left: 10px;
@@ -171,7 +168,6 @@ h1 {
 .step__icon:hover {
   color: #9356DC;
 }
-
 .step__description {
   padding-left: 15px;
   font-weight: bold;
@@ -210,6 +206,14 @@ h1 {
 }
 .restaurant__info {
   padding: 15px;
+}
+.restaurant__info .fa-heart {
+  position: absolute;
+  bottom: 70px;
+  right: 30px;
+}
+.restaurant__info .fa-heart:hover {
+  background-image: linear-gradient(#FF79DA, #9356DC);
 }
 .restaurant__new-tag {
   background-color: #99E2D0;

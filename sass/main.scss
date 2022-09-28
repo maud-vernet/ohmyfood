@@ -17,35 +17,36 @@ a {
     text-decoration: none;
 }
 
-/* presentation */
-
-#presentation {
-    background: linear-gradient(#FFFFFF, $light-bg-color);
-    padding-bottom: 40px;
-}
-
-#presentation__location {
-    @include center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #eaeaea;
-
-    p {
-        margin-left: 10px;
-        font-weight: bold;
-    }
-}
-
 h1 {
     font-size: 20px;
     text-align: center;
     padding: 20px 30px 0 30px;
 }
 
-#presentation__catch-phrase {
-    text-align: center;
-    padding: 0 15px 0 15px;
+/* presentation */
+
+#presentation {
+    background: linear-gradient(#FFFFFF, $light-bg-color);
+    padding-bottom: 40px;
+
+    &__location {
+        @include center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #eaeaea;
+    
+        p {
+            margin-left: 10px;
+            font-weight: bold;
+        }
+    
+    }
+
+    &__catch-phrase {
+        text-align: center;
+        padding: 0 15px 0 15px;
+    }
 }
 
 h2 {
@@ -88,26 +89,30 @@ h2 {
     
 }
 
-.step__number {
-    color: #FFFFFF;
-    background-color: $color-primary;
-    border-radius: 100%;
-    padding: 8px 13px 8px 13px;
-    transform: translateX(-25px);
-}
+.step {
 
-.step__icon {
-    color : #7e7e7e;
-    padding-left: 10px;
-
-    &:hover {
-        color : $color-primary;
+    &__number {
+        color: #FFFFFF;
+        background-color: $color-primary;
+        border-radius: 100%;
+        padding: 8px 13px 8px 13px;
+        transform: translateX(-25px);
     }
-}
 
-.step__description {
-    padding-left: 15px;
-    font-weight: bold;
+    &__icon {
+        color : #7e7e7e;
+        padding-left: 10px;
+    
+        &:hover {
+            color : $color-primary;
+        }
+    }
+
+    &__description {
+        padding-left: 15px;
+        font-weight: bold;
+    }
+
 }
 
 #restaurants {
@@ -143,11 +148,21 @@ h2 {
 
     &__info {
         padding: 15px;
+
+        .fa-heart {
+            position: absolute;
+            bottom: 70px;
+            right: 30px;
+
+            &:hover {
+                background-image: linear-gradient($color-secondary, $color-primary);
+            }
+        }
     }
 
     &__new-tag {
         background-color: $color-tertiary;
-        color : darken($color-tertiary, 40%);
+        color: darken($color-tertiary, 40%);
         font-weight: bold;
         padding: 8px 10px 8px 10px;
         width: fit-content;
