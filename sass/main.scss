@@ -13,7 +13,7 @@ a {
     text-decoration: none;
 }
 
-h1 {
+#presentation h1 {
     font-size: 20px;
     text-align: center;
     padding: 20px 30px 0 30px;
@@ -27,8 +27,7 @@ h1 {
 
     &__location {
         @include center;
-        display: flex;
-        align-items: center;
+        @include align-items-center;
         justify-content: center;
         background-color: #eaeaea;
     
@@ -142,10 +141,9 @@ h2 {
 
 .restaurant {
     &__img {
-        width: 100%;
+        @include object-fit-cover;
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
-        object-fit: cover;
 
         @media only screen and (max-width: 768px) {
             height: 45vw;
@@ -195,3 +193,47 @@ h2 {
         right: 15px;
     }
 }
+
+/* page restaurant */
+
+.restaurant-presentation {
+
+    img {
+        @include object-fit-cover;
+    }
+}
+
+#restaurant-name {
+    @include align-items-center;
+    justify-content: space-between;
+
+    h1 {
+        font-family: $brand-font;
+    }
+}
+
+#menu {
+    @include main-padding;
+    background-color: $light-bg-color;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.plate {
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    width: 45%;
+    position: relative;
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+    }
+
+    &-type h2 {
+        text-transform: uppercase;
+        border-bottom: solid 4px $color-tertiary;
+    }
+}
+
+      

@@ -11,6 +11,11 @@ body {
 header {
   width: 100%;
   box-shadow: 0 10px 2px -2px #e2e2e2;
+  display: flex;
+  align-items: center;
+}
+header a {
+  margin-left: 3%;
 }
 
 #logo {
@@ -95,7 +100,7 @@ a {
   text-decoration: none;
 }
 
-h1 {
+#presentation h1 {
   font-size: 20px;
   text-align: center;
   padding: 20px 30px 0 30px;
@@ -216,9 +221,9 @@ h2 {
 
 .restaurant__img {
   width: 100%;
+  object-fit: cover;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  object-fit: cover;
 }
 @media only screen and (max-width: 768px) {
   .restaurant__img {
@@ -262,6 +267,45 @@ h2 {
   position: absolute;
   top: 15px;
   right: 15px;
+}
+
+/* page restaurant */
+.restaurant-presentation img {
+  width: 100%;
+  object-fit: cover;
+}
+
+#restaurant-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#restaurant-name h1 {
+  font-family: "Shrikhand";
+}
+
+#menu {
+  padding: 0 3% 0 3%;
+  background-color: #f6f6f6;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.plate {
+  background-color: #FFFFFF;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  width: 45%;
+  position: relative;
+}
+@media only screen and (max-width: 768px) {
+  .plate {
+    width: 100%;
+  }
+}
+.plate-type h2 {
+  text-transform: uppercase;
+  border-bottom: solid 4px #99E2D0;
 }
 
 /*# sourceMappingURL=style.css.map */

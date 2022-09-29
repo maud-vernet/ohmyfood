@@ -1,6 +1,11 @@
 header {
     width: 100%;
     box-shadow: 0 10px 2px -2px #e2e2e2;
+    @include align-items-center;
+
+    a {
+        margin-left: 3%;
+    }
 }
 
 #logo {
