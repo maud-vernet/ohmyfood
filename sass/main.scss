@@ -50,6 +50,8 @@ h1 {
 }
 
 h2 {
+    padding-bottom: 15px;
+
     @media only screen and (min-width: 769px) {
         text-align: center;
     }
@@ -118,10 +120,15 @@ h2 {
 #restaurants {
     background-color: $light-bg-color;
     @include main-padding;
+    padding-top: 40px;
+    padding-bottom: 30px;
 
     &__cards {
         @include flex-wrap-row;
         gap: 5%;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -142,22 +149,41 @@ h2 {
         width: 100%;
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
-        height: 250px;
         object-fit: cover;
+
+        @media only screen and (max-width: 768px) {
+            height: 45vw;
+        }
+
+        @media only screen and (min-width: 769px) {
+            height: 250px;
+        }
     }
 
     &__info {
-        padding: 15px;
+        padding: 15px 20px 15px 20px;
+        font-size: 18px;
 
         .fa-heart {
             position: absolute;
-            bottom: 70px;
+            bottom: 55px;
             right: 30px;
+            background-image: linear-gradient($color-secondary, $color-primary);
 
             &:hover {
                 background-image: linear-gradient($color-secondary, $color-primary);
             }
         }
+    }
+
+    &__name {
+        margin-block-start: 5px;
+        margin-block-end: 8px;
+    }
+
+    &__location {
+        margin-block-start: 8px;
+        margin-block-end: 5px;
     }
 
     &__new-tag {

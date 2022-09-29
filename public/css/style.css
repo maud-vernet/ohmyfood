@@ -115,6 +115,9 @@ h1 {
   padding: 0 15px 0 15px;
 }
 
+h2 {
+  padding-bottom: 15px;
+}
 @media only screen and (min-width: 769px) {
   h2 {
     text-align: center;
@@ -176,12 +179,17 @@ h1 {
 #restaurants {
   background-color: #f6f6f6;
   padding: 0 3% 0 3%;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 #restaurants__cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 5%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .restaurants__card {
@@ -201,19 +209,38 @@ h1 {
   width: 100%;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  height: 250px;
   object-fit: cover;
 }
+@media only screen and (max-width: 768px) {
+  .restaurant__img {
+    height: 45vw;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .restaurant__img {
+    height: 250px;
+  }
+}
 .restaurant__info {
-  padding: 15px;
+  padding: 15px 20px 15px 20px;
+  font-size: 18px;
 }
 .restaurant__info .fa-heart {
   position: absolute;
-  bottom: 70px;
+  bottom: 55px;
   right: 30px;
+  background-image: linear-gradient(#FF79DA, #9356DC);
 }
 .restaurant__info .fa-heart:hover {
   background-image: linear-gradient(#FF79DA, #9356DC);
+}
+.restaurant__name {
+  margin-block-start: 5px;
+  margin-block-end: 8px;
+}
+.restaurant__location {
+  margin-block-start: 8px;
+  margin-block-end: 5px;
 }
 .restaurant__new-tag {
   background-color: #99E2D0;
