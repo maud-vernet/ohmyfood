@@ -35,14 +35,16 @@ footer ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  justify-content: space-between;
 }
 footer li {
   margin-top: 10px;
-  width: 25%;
+  text-align: center;
 }
 @media only screen and (max-width: 768px) {
   footer li {
     width: 100%;
+    text-align: initial;
   }
 }
 footer a {
@@ -52,9 +54,20 @@ footer a:hover {
   text-decoration: underline;
 }
 
+#footer__content {
+  max-width: 1000px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 #footer__title {
   font-family: "Shrikhand";
   font-size: 20px;
+}
+@media only screen and (min-width: 769px) {
+  #footer__title {
+    text-align: center;
+  }
 }
 
 .footer__icon {
@@ -77,10 +90,6 @@ footer a:hover {
 }
 
 /* tempo */
-footer img {
-  max-width: 100px;
-}
-
 a {
   color: inherit;
   text-decoration: none;

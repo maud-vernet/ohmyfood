@@ -5,23 +5,22 @@ footer {
     @include main-padding;
     padding-top: 15px;
 
-
     ul {
         list-style: none;
         padding-inline-start: 0;
         margin-block-end: 0;
         padding-bottom: 30px;
         @include flex-wrap-row;
-        
-
+        justify-content: space-between;
     }
 
     li {
         margin-top: 10px;
-        width: 25%;
-
+        text-align: center;
+        
         @media only screen and (max-width: 768px) {
             width: 100%;
+            text-align: initial;
         }
     }
 
@@ -34,9 +33,20 @@ footer {
     }
 }
 
-#footer__title {
-    font-family: 'Shrikhand';
-    font-size: 20px;
+#footer {
+    &__content {
+        max-width: 1000px;
+        @include center;
+    }
+
+    &__title {
+        font-family: 'Shrikhand';
+        font-size: 20px;
+
+        @media only screen and (min-width: 769px) {
+            text-align: center;
+        }
+    }
 }
 
 .footer__icon {
