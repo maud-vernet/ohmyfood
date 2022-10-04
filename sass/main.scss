@@ -4,6 +4,7 @@
 @import 'layouts/header.scss';
 @import 'layouts/footer.scss';
 @import 'components/purple-button.scss';
+@import 'components/like-button.scss';
 
 /* tempo */
 
@@ -54,13 +55,6 @@ h2 {
     }
 }
 
-.fa-heart {
-    font-size: 32px;
-
-    &:hover {
-        background-image: linear-gradient($color-secondary, $color-primary);
-    }
-}
 
 #fonctionnement {
     @include main-padding;
@@ -174,7 +168,6 @@ h2 {
             position: absolute;
             bottom: 55px;
             right: 30px;
-            background-image: linear-gradient($color-secondary, $color-primary);
         }
     }
 
@@ -216,6 +209,12 @@ h2 {
     
     @include align-items-center;
     justify-content: space-between;
+    position: relative;
+
+    .fa-heart {
+        position: absolute;
+        right: 0px;
+    }
 
     h1 {
         font-family: $brand-font;

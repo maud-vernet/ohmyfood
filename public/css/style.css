@@ -95,6 +95,24 @@ footer a:hover {
   border-radius: 30px;
 }
 
+.fa-heart {
+  font-size: 32px;
+}
+.fa-heart:hover {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 1;
+  transition: background-image 0.8s ease;
+  transform: scale(1.1);
+}
+
+.like-full {
+  color: #fff;
+  opacity: 0;
+}
+
 /* tempo */
 a {
   color: inherit;
@@ -138,13 +156,6 @@ h2 {
   .section-title {
     text-align: center;
   }
-}
-
-.fa-heart {
-  font-size: 32px;
-}
-.fa-heart:hover {
-  background-image: linear-gradient(#FF79DA, #9356DC);
 }
 
 #fonctionnement {
@@ -258,7 +269,6 @@ h2 {
   position: absolute;
   bottom: 55px;
   right: 30px;
-  background-image: linear-gradient(#FF79DA, #9356DC);
 }
 .restaurant__name {
   margin-block-start: 5px;
@@ -292,6 +302,11 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+}
+#restaurant-name .fa-heart {
+  position: absolute;
+  right: 0px;
 }
 #restaurant-name h1 {
   font-family: "Shrikhand";
