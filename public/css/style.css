@@ -175,6 +175,9 @@ h2 {
 .fonctionnement__step:hover {
   background-color: rgba(147, 86, 220, 0.1);
 }
+.fonctionnement__step:hover > .step__icon {
+  color: #9356DC;
+}
 @media only screen and (max-width: 768px) {
   .fonctionnement__step {
     width: 100%;

@@ -85,9 +85,13 @@ h2 {
     @include shadow;
     padding: 10px;
     margin-bottom: 15px;
-    
-    &:hover {
+
+    &:hover{
         background-color : rgba($color-primary, 0.1);
+    }
+    
+    &:hover > .step__icon {
+        color : $color-primary;
     }
 
     @media only screen and (max-width: 768px) {
