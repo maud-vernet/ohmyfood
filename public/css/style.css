@@ -31,16 +31,19 @@ body {
 #loader__points .point:nth-child(1) {
   animation-delay: 0.5s;
   -webkit-animation-delay: 0.5s;
+  background-color: #9356DC;
 }
 
 #loader__points .point:nth-child(2) {
   animation-delay: 1s;
   -webkit-animation-delay: 1s;
+  background-color: #FF79DA;
 }
 
 #loader__points .point:nth-child(3) {
   animation-delay: 1.5s;
   -webkit-animation-delay: 1.5s;
+  background-color: #99E2D0;
 }
 
 header {
@@ -128,6 +131,11 @@ footer a:hover {
   text-align: center;
   padding: 18px;
   border-radius: 30px;
+  transition-duration: 0.5s;
+}
+.purple-button:hover {
+  opacity: 0.5;
+  transform: opacity 0.8s;
 }
 
 .fa-heart {
@@ -161,9 +169,10 @@ a {
 
 @keyframes loader-background-animation {
   0% {
-    visibility: visible;
+    opacity: 1;
   }
   100% {
+    opacity: 0;
     visibility: hidden;
   }
 }
@@ -171,8 +180,11 @@ a {
   0% {
     opacity: 0;
   }
-  100% {
+  50% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 #loader {
@@ -182,23 +194,31 @@ a {
   height: 100%;
   width: 100%;
   position: fixed;
-  animation: loader-background-animation 4s;
-  animation-fill-mode: forwards;
+  animation: loader-background-animation 3s 3s;
+  animation-fill-mode: both;
+}
+#loader__title {
+  font-family: "Shrikhand";
+  font-size: 40px;
+  margin-top: 40vh;
+  display: flex;
+  justify-content: center;
+  animation: loader-points-animation 3s;
+  opacity: 0;
 }
 #loader__points {
   display: flex;
   gap: 30px;
   justify-content: center;
-  margin-top: 50vh;
+  margin-top: 10vh;
 }
 
 .point {
-  background-color: black;
-  width: 50px;
-  min-width: 50px;
-  height: 50px;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
   border-radius: 100%;
-  animation: loader-points-animation 3s;
+  animation: loader-points-animation 2s;
   animation-fill-mode: both;
 }
 
@@ -320,6 +340,9 @@ h2 {
   .restaurants__card {
     width: 100%;
   }
+}
+.restaurants__card:hover {
+  border: solid 4px #99E2D0;
 }
 
 .restaurant__img {
@@ -475,6 +498,7 @@ h2 {
 }
 .plate__price {
   font-weight: bold;
+  transition-duration: 630ms;
 }
 .plate-selected {
   background-color: #99E2D0;
@@ -488,20 +512,19 @@ h2 {
   font-size: 32px;
   position: absolute;
   right: -125px;
+  transition-duration: 630ms;
 }
 .plate-selected .fa-circle-check {
   color: #FFFFFF;
   margin-left: auto;
   margin-right: auto;
+  transition-duration: 630ms;
 }
 .plate:hover > .plate-selected {
   transform: translateX(-125px);
-  transition: all 630ms;
-  transform-origin: bottom;
 }
 .plate:hover .plate__price {
   transform: translateX(-125px);
-  transition: all 630ms;
 }
 .plate:hover .fa-circle-check {
   -webkit-transition: -webkit-transform 630ms ease-in-out;

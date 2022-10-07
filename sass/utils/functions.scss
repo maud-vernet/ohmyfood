@@ -8,6 +8,17 @@
   @for $point from 1 through 3 {
     #loader__points .point:nth-child(#{$point}) { 
         animation-delay: $point * 0.5s;
-        -webkit-animation-delay: $point * 0.5s; 
+        -webkit-animation-delay: $point * 0.5s;
+        @if ($point== 1) {
+            background-color: #9356DC;
+        }
+        @if ($point== 2) {
+            background-color: #FF79DA;
+        }
+        @if ($point== 3) {
+            background-color: #99E2D0;
+        }
     }
   }
+
+  

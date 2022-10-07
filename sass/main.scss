@@ -23,11 +23,12 @@ a {
 }
 
 @keyframes loader-background-animation {
-    0% {
-        visibility: visible;
+      0% {
+        opacity: 1;
       }
-      100% {
-        visibility: hidden;
+      100%{
+        opacity: 0;
+        visibility: hidden; 
       }
 }
 
@@ -35,8 +36,11 @@ a {
     0% {
         opacity: 0;
     }
-    100% {
+    50% {
         opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
 
@@ -47,25 +51,34 @@ a {
     height: 100%;
     width: 100%;
     position: fixed;
-    animation: loader-background-animation 4s;
-    animation-fill-mode: forwards;
+    animation: loader-background-animation 3s 3s;
+    animation-fill-mode: both;
+
+    &__title {
+        font-family: $brand-font;
+        font-size: 40px;
+        margin-top: 40vh;
+        display: flex;
+        justify-content: center;
+        animation: loader-points-animation 3s;
+        opacity: 0;
+    }
 
     &__points {
         display: flex;
         gap: 30px;
         justify-content: center;
-        margin-top: 50vh;
+        margin-top: 10vh;
         
     }
 }
 
 .point {
-    background-color: black;
-    width: 50px;
-    min-width: 50px;
-    height: 50px;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
     border-radius: 100%;
-    animation: loader-points-animation 3s;
+    animation: loader-points-animation 2s;
     animation-fill-mode: both;
     
 }
@@ -190,6 +203,10 @@ h2 {
 
     @media only screen and (max-width: 768px) {
         width: 100%;
+    }
+
+    &:hover {
+        border: solid 4px $color-tertiary;
     }
 }
 
@@ -352,6 +369,7 @@ h2 {
 
     &__price {
         font-weight: bold;
+        transition-duration: 630ms;
     }
 
     &-selected {
@@ -366,24 +384,23 @@ h2 {
         font-size: 32px;
         position: absolute;
         right: -125px;
+        transition-duration: 630ms;
 
         .fa-circle-check {
             color: #FFFFFF;
             margin-left: auto;
             margin-right: auto;
+            transition-duration: 630ms;
         }
     }
 
     &:hover {
         > .plate-selected {
             transform: translateX(-125px);
-            transition: all 630ms;
-            transform-origin: bottom;
         }
 
         .plate__price {
             transform: translateX(-125px);
-            transition: all 630ms;
         }
 
         .fa-circle-check {

@@ -2,13 +2,13 @@
     font-size: 32px;
 
             &:hover {
-        background-image: linear-gradient($color-secondary, $color-primary);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        opacity: 1;
-        transition: all .8s ease;
-        transform: scale(1.1);
+            background-image: linear-gradient($color-secondary, $color-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            opacity: 1;
+            transition: all .8s ease;
+            transform: scale(1.1);
         }
 }
 
