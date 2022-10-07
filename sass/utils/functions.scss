@@ -1,0 +1,13 @@
+@for $plate from 1 through 4 {
+    .plate-type .plate:nth-child(#{$plate}) { 
+        animation-delay: $plate * 0.5s;
+        -webkit-animation-delay: $plate * 0.5s;
+    }
+  }
+
+  @for $point from 1 through 3 {
+    #loader__points .point:nth-child(#{$point}) { 
+        animation-delay: $point * 0.5s;
+        -webkit-animation-delay: $point * 0.5s; 
+    }
+  }

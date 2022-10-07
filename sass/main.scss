@@ -1,12 +1,14 @@
 @import 'base/main.scss';
 @import 'utils/mixins.scss';
+@import 'utils/functions.scss';
 @import 'utils/_variables.scss';
 @import 'layouts/header.scss';
 @import 'layouts/footer.scss';
 @import 'components/purple-button.scss';
 @import 'components/like-button.scss';
 
-/* tempo */
+
+
 
 
 a {
@@ -20,7 +22,53 @@ a {
     padding: 20px 30px 0 30px;
 }
 
-/* presentation */
+@keyframes loader-background-animation {
+    0% {
+        visibility: visible;
+      }
+      100% {
+        visibility: hidden;
+      }
+}
+
+@keyframes loader-points-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#loader {
+    background-color: #EAEAEA;
+    opacity: 0.95;
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    animation: loader-background-animation 4s;
+    animation-fill-mode: forwards;
+
+    &__points {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        margin-top: 50vh;
+        
+    }
+}
+
+.point {
+    background-color: black;
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    animation: loader-points-animation 3s;
+    animation-fill-mode: both;
+    
+}
 
 #presentation {
     background: linear-gradient(#FFFFFF, $light-bg-color);
@@ -240,17 +288,33 @@ h2 {
     max-width: 1000px;
 }
 
-
+@keyframes plates-appearing {
+    0% {
+        -webkit-transform: translateY(50%);
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
 
 .plate {
     
     @include cards;
     width: 100%;
     display: flex;
+    position: relative;
+    overflow: hidden;
+    animation: plates-appearing 1.5s;
+    animation-fill-mode: both;
+    animation-delay: 280ms;
 
     &__info {
         padding: 15px;
-        width: 88%;
+        width: 100%;
 
         div {
             display: flex;
@@ -293,12 +357,15 @@ h2 {
     &-selected {
         background-color: $color-tertiary;
         width: 12%;
+        height: 100%;
         border-top-right-radius: 25px;
         border-bottom-right-radius: 25px;
         place-items: center;
         display: flex;
         min-width: 50px;
         font-size: 32px;
+        position: absolute;
+        right: -125px;
 
         .fa-circle-check {
             color: #FFFFFF;
@@ -306,6 +373,29 @@ h2 {
             margin-right: auto;
         }
     }
+
+    &:hover {
+        > .plate-selected {
+            transform: translateX(-125px);
+            transition: all 630ms;
+            transform-origin: bottom;
+        }
+
+        .plate__price {
+            transform: translateX(-125px);
+            transition: all 630ms;
+        }
+
+        .fa-circle-check {
+            -webkit-transition: -webkit-transform 630ms ease-in-out;
+            transition: -webkit-transform 630ms ease-in-out;
+            transition: transform 630ms ease-in-out;
+            transition: transform 630ms ease-in-out, -webkit-transform 630ms ease-in-out;
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+    
 }
 
 #commander {
