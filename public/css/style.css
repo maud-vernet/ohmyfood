@@ -470,13 +470,9 @@ h2 {
 }
 .plate__info div {
   display: flex;
-  justify-content: space-between;
 }
 .plate__info p {
   margin-block-end: 0;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 .plate__info h3 {
   margin-block-start: 0;
@@ -484,6 +480,12 @@ h2 {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+.plate__description {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 80%;
 }
 .plate-type h2 {
   text-transform: uppercase;
@@ -502,6 +504,8 @@ h2 {
 .plate__price {
   font-weight: bold;
   transition-duration: 630ms;
+  position: absolute;
+  right: 15px;
 }
 .plate-selected {
   background-color: #99E2D0;
@@ -528,6 +532,7 @@ h2 {
 }
 .plate:hover .plate__price {
   transform: translateX(-12vw);
+  transform-origin: left;
 }
 .plate:hover .fa-circle-check {
   transition: transform 630ms ease-in-out;
