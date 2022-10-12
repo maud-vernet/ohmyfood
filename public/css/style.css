@@ -273,22 +273,26 @@ h2 {
   display: flex;
   align-items: baseline;
   border-radius: 20px;
-  min-width: 280px;
   background-color: #f6f6f6;
   box-shadow: 1px 1px 5px lightgrey;
   padding: 10px;
   margin-bottom: 15px;
+}
+@media only screen and (min-width: 769px) {
+  .fonctionnement__step {
+    min-width: 280px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .fonctionnement__step {
+    width: 100%;
+  }
 }
 .fonctionnement__step:hover {
   background-color: rgba(147, 86, 220, 0.1);
 }
 .fonctionnement__step:hover > .step__icon {
   color: #9356DC;
-}
-@media only screen and (max-width: 768px) {
-  .fonctionnement__step {
-    width: 100%;
-  }
 }
 
 .step__number {
@@ -341,8 +345,9 @@ h2 {
     width: 100%;
   }
 }
-.restaurants__card:hover {
-  border: solid 4px #99E2D0;
+.restaurants__card:hover > .restaurant__img {
+  opacity: 0.5;
+  transform: opacity 3s;
 }
 
 .restaurant__img {
@@ -367,7 +372,7 @@ h2 {
 }
 .restaurant__info .fa-heart {
   position: absolute;
-  bottom: 55px;
+  bottom: 40px;
   right: 30px;
 }
 .restaurant__name {
@@ -457,9 +462,7 @@ h2 {
   display: flex;
   position: relative;
   overflow: hidden;
-  animation: plates-appearing 1.5s;
-  animation-fill-mode: both;
-  animation-delay: 280ms;
+  animation: plates-appearing 1.5s both;
 }
 .plate__info {
   padding: 15px;
@@ -524,14 +527,10 @@ h2 {
   transform: translateX(-125px);
 }
 .plate:hover .plate__price {
-  transform: translateX(-125px);
+  transform: translateX(-12vw);
 }
 .plate:hover .fa-circle-check {
-  -webkit-transition: -webkit-transform 630ms ease-in-out;
-  transition: -webkit-transform 630ms ease-in-out;
   transition: transform 630ms ease-in-out;
-  transition: transform 630ms ease-in-out, -webkit-transform 630ms ease-in-out;
-  -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
 }
 

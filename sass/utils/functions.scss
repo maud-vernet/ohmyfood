@@ -1,3 +1,5 @@
+@import '../utils/_variables.scss';
+
 @for $plate from 1 through 4 {
     .plate-type .plate:nth-child(#{$plate}) { 
         animation-delay: $plate * 0.5s;
@@ -10,13 +12,13 @@
         animation-delay: $point * 0.5s;
         -webkit-animation-delay: $point * 0.5s;
         @if ($point== 1) {
-            background-color: #9356DC;
+            background-color: $color-primary;
         }
         @if ($point== 2) {
-            background-color: #FF79DA;
+            background-color: $color-secondary;
         }
         @if ($point== 3) {
-            background-color: #99E2D0;
+            background-color: $color-tertiary;
         }
     }
   }

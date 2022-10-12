@@ -8,9 +8,6 @@
 @import 'components/like-button.scss';
 
 
-
-
-
 a {
     color: inherit;
     text-decoration: none;
@@ -135,11 +132,18 @@ h2 {
     display: flex;
     align-items: baseline;
     border-radius: 20px;
-    min-width: 280px;
     background-color: $light-bg-color;
     @include shadow;
     padding: 10px;
     margin-bottom: 15px;
+
+    @media only screen and (min-width: 769px) {
+        min-width: 280px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+    }
 
     &:hover{
         background-color : rgba($color-primary, 0.1);
@@ -147,10 +151,6 @@ h2 {
     
     &:hover > .step__icon {
         color : $color-primary;
-    }
-
-    @media only screen and (max-width: 768px) {
-        width: 100%;
     }
     
 }
@@ -205,8 +205,9 @@ h2 {
         width: 100%;
     }
 
-    &:hover {
-        border: solid 4px $color-tertiary;
+    &:hover > .restaurant__img {
+        opacity: 0.5;
+        transform: opacity 3s;
     }
 }
 
@@ -231,7 +232,7 @@ h2 {
 
         .fa-heart {
             position: absolute;
-            bottom: 55px;
+            bottom: 40px;
             right: 30px;
         }
     }
@@ -325,9 +326,7 @@ h2 {
     display: flex;
     position: relative;
     overflow: hidden;
-    animation: plates-appearing 1.5s;
-    animation-fill-mode: both;
-    animation-delay: 280ms;
+    animation: plates-appearing 1.5s both;
 
     &__info {
         padding: 15px;
@@ -400,15 +399,11 @@ h2 {
         }
 
         .plate__price {
-            transform: translateX(-125px);
+            transform: translateX(-12vw);
         }
 
         .fa-circle-check {
-            -webkit-transition: -webkit-transform 630ms ease-in-out;
-            transition: -webkit-transform 630ms ease-in-out;
             transition: transform 630ms ease-in-out;
-            transition: transform 630ms ease-in-out, -webkit-transform 630ms ease-in-out;
-            -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
         }
     }
