@@ -412,9 +412,11 @@ h2 {
 #restaurant-name .fa-heart {
   position: absolute;
   right: 0px;
+  vertical-align: text-top;
 }
 #restaurant-name h1 {
   font-family: "Shrikhand";
+  width: 90%;
 }
 @media only screen and (min-width: 769px) {
   #restaurant-name h1 {
@@ -467,6 +469,7 @@ h2 {
 .plate__info {
   padding: 15px;
   width: 100%;
+  box-sizing: border-box;
 }
 .plate__info div {
   display: flex;
@@ -480,12 +483,15 @@ h2 {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  transition-duration: 630ms;
+  max-width: 80%;
 }
 .plate__description {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   max-width: 80%;
+  transition-duration: 630ms;
 }
 .plate-type h2 {
   text-transform: uppercase;
@@ -532,11 +538,14 @@ h2 {
 }
 .plate:hover .plate__price {
   transform: translateX(-12vw);
-  transform-origin: left;
 }
 .plate:hover .fa-circle-check {
   transition: transform 630ms ease-in-out;
   transform: rotate(360deg);
+}
+.plate:hover .plate__info h3, .plate:hover .plate__description {
+  width: 70%;
+  transition: width 630ms;
 }
 
 #commander {
