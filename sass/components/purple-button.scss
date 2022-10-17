@@ -12,6 +12,7 @@
 
     &:hover {
         opacity: 0.5;
-        transform: opacity .8s;
+        box-shadow: 1px 1px 5px 2px lightgray;
+        transform: all .8s;
     }
 }
