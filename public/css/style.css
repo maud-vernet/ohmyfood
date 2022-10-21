@@ -1,13 +1,17 @@
+/* general properties for all pages */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand:wght@400&display=swap");
 body {
   font-family: "Roboto", sans-serif;
-}
-
-body {
   box-sizing: border-box;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Animation delay increase for plates */
 .plate-type .plate:nth-child(1) {
   animation-delay: 0.5s;
   -webkit-animation-delay: 0.5s;
@@ -28,6 +32,12 @@ body {
   -webkit-animation-delay: 2s;
 }
 
+.plate-type .plate:nth-child(5) {
+  animation-delay: 2.5s;
+  -webkit-animation-delay: 2.5s;
+}
+
+/* Animation delay increase for points in loading spinner + points colors */
 #loader__points .point:nth-child(1) {
   animation-delay: 0.5s;
   -webkit-animation-delay: 0.5s;
@@ -157,17 +167,14 @@ footer a:hover {
   opacity: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
+/* index page */
 #presentation h1 {
   font-size: 20px;
   text-align: center;
   padding: 20px 30px 0 30px;
 }
 
+/* index page loader spinner animations */
 @keyframes loader-background-animation {
   0% {
     opacity: 1;
@@ -223,6 +230,7 @@ a {
   animation-fill-mode: both;
 }
 
+/* properties for presentation */
 #presentation {
   background: linear-gradient(#FFFFFF, #f6f6f6);
   padding-bottom: 40px;
@@ -245,6 +253,7 @@ a {
   padding: 0 15px 0 15px;
 }
 
+/* properties for sections */
 h2 {
   padding-bottom: 15px;
 }
@@ -255,6 +264,7 @@ h2 {
   }
 }
 
+/* properties for fonctionnement section on index page */
 #fonctionnement {
   padding-left: 3%;
   padding-right: 3%;
@@ -315,6 +325,7 @@ h2 {
   font-weight: bold;
 }
 
+/* properties for restaurents section on index page */
 #restaurants {
   background-color: #f6f6f6;
   padding-left: 3%;
@@ -425,6 +436,7 @@ h2 {
   }
 }
 
+/* properties for menu section */
 #menu {
   padding-left: 3%;
   padding-right: 3%;

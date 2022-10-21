@@ -8,16 +8,15 @@
 @import 'components/like-button.scss';
 
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
+/* index page */
 
 #presentation h1 {
     font-size: 20px;
     text-align: center;
     padding: 20px 30px 0 30px;
 }
+
+/* index page loader spinner animations */
 
 @keyframes loader-background-animation {
       0% {
@@ -80,6 +79,8 @@ a {
     
 }
 
+/* properties for presentation */
+
 #presentation {
     background: linear-gradient(#FFFFFF, $light-bg-color);
     padding-bottom: 40px;
@@ -103,6 +104,8 @@ a {
     }
 }
 
+/* properties for sections */
+
 h2 {
     padding-bottom: 15px;
 }
@@ -113,6 +116,7 @@ h2 {
     }
 }
 
+/* properties for fonctionnement section on index page */
 
 #fonctionnement {
     @include main-padding;
@@ -180,6 +184,8 @@ h2 {
     }
 
 }
+
+/* properties for restaurents section on index page */
 
 #restaurants {
     background-color: $light-bg-color;
@@ -292,6 +298,8 @@ h2 {
         }
     }
 }
+
+/* properties for menu section */
 
 #menu {
     @include main-padding;

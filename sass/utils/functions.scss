@@ -1,11 +1,15 @@
 @import '../utils/_variables.scss';
 
-@for $plate from 1 through 4 {
+/* Animation delay increase for plates */
+
+@for $plate from 1 through 5 {
     .plate-type .plate:nth-child(#{$plate}) { 
         animation-delay: $plate * 0.5s;
         -webkit-animation-delay: $plate * 0.5s;
     }
   }
+
+  /* Animation delay increase for points in loading spinner + points colors */
 
   @for $point from 1 through 3 {
     #loader__points .point:nth-child(#{$point}) { 
